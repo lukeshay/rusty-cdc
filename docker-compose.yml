@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  fake-pubsub:
+    restart: always
+    container_name: rusty-cdc-fake-pubsub
+    build:
+      context: infrastructure/fake-pubsub
+    image: rusty-cdc-fake-pubsub:SNAPSHOT
+    ports:
+      - "3334:3334"
